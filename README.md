@@ -28,7 +28,7 @@ uv pip install -e .
 
 2. スクリプトの実行:
 ```bash
-python main.py
+python main.py`
 ```
 
 3. 出力:
