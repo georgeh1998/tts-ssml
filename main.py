@@ -18,7 +18,7 @@ def text_to_speech(ssml_text, output_file):
     # 音声設定
     voice = texttospeech.VoiceSelectionParams(
         language_code="ja-JP",
-        name="ja-JP-Neural2-A",
+        name="ja-JP-Standard-A",
         ssml_gender=texttospeech.SsmlVoiceGender.FEMALE
     )
 
@@ -39,10 +39,10 @@ def text_to_speech(ssml_text, output_file):
 
 def main():
     # 環境変数の設定
-    os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "test.json"
+    os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "service-account.json"
 
     # SSMLファイルの読み込み
-    ssml_text = read_ssml_file("upload.xml")
+    ssml_text = read_ssml_file("upload-ssml.xml")
     
     # 音声ファイルの生成
     text_to_speech(ssml_text, "output.mp3")
